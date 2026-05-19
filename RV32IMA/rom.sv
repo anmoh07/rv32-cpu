@@ -1,0 +1,23 @@
+module rom
+(
+
+	input logic [31:0] pc,
+	
+	output logic [31:0] instruction
+
+);
+
+logic [31:0] memory [1023:0];
+
+initial begin
+    $readmemh("program.hex", memory);
+end 
+
+always_comb
+begin
+
+	instruction = memory[pc[11:2]]; //just for testing purposes since 2^32 is a lot for waveform testing
+
+end
+
+endmodule

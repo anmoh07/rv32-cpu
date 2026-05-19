@@ -1,0 +1,58 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/18.1
+valu
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1778792456
+!i10b 1
+!s100 C[:Y_aXNPbhzo4lbQnDTh3
+IfD1PRD<1zaP8A18ELhQL91
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+!s105 alu_sv_unit
+S1
+Z2 dC:/RV32IMA
+w1778792444
+8alu.sv
+Falu.sv
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1778792456.000000
+!s107 alu.sv|
+!s90 -reportprogress|300|-sv|alu.sv|
+!i113 1
+o-sv
+Z4 tCvgOpt 0
+vpc
+R0
+!s110 1778462731
+!i10b 1
+!s100 f:74R4S?cH>B0f@_<8>d63
+Ih?OMA:P3fP]SFJa]aHDW:0
+R1
+!s105 pc_sv_unit
+S1
+R2
+w1778462712
+8C:/RV32IMA/pc.sv
+FC:/RV32IMA/pc.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1778462731.000000
+!s107 C:/RV32IMA/pc.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/RV32IMA/pc.sv|
+!i113 1
+o-work work -sv
+R4

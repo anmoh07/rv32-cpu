@@ -1,0 +1,55 @@
+module alu
+(
+
+	input logic [3:0] alu_op,
+	input logic [31:0] value_1,
+	input logic [31:0] value_2,
+	
+	output logic [31:0] result
+
+
+);
+
+typedef enum logic [3:0]
+{
+
+	ADD,
+	SUB,
+	XOR,
+	OR,
+	AND,
+	SLL,
+	SRL,
+	SRA,
+	SLT,
+	SLTU
+
+} op_t;
+
+
+
+always_comb
+begin
+result = 32'h00000000;
+
+	case (op_t'(alu_op))
+
+		ADD: result = value_1 + value_2;
+		SUB: result = value_1 - value_2;
+		XOR: result = value_1 ^ value_2;
+		OR: result = value_1 | value_2;
+		AND: result = value_1 & value_2;
+		SLL: result = value_1 << value_2[4:0];
+		SRL: result = value_1 >> value_2[4:0];
+		SRA: result = $signed(value_1) >>> (value_2[4:0]);
+		SLT: result = ($signed(value_1) < $signed(value_2)) ? 32'h00000001 : 32'h00000000; 
+		SLTU: result = (value_1 < value_2) ? 32'h00000001 : 32'h00000000;
+		default: result = 32'h00000000; 
+
+	endcase
+
+end
+
+
+endmodule
+
