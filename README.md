@@ -9,6 +9,12 @@ Single-cycle RV32I core implemented in SystemVerilog and simulated using QuestaS
 - Synchronous register and memory writes
 - Modular datapath design
 
+## Toolchain
+
+- SystemVerilog
+- QuestaSim
+- RISC-V GNU Toolchain
+
 ## Implemented Instructions
 
 ### Arithmetic / Logic
@@ -86,4 +92,4 @@ rtl/
 - Pipelined implementation
 - Hazard handling
 - FPGA deployment
-- Asynchornous prototyping
+- Asynchronous prototyping
