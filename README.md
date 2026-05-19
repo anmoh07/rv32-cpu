@@ -77,15 +77,15 @@ all occur within one clock cycle.
 ## Project Structure
 
 rtl/
-    pc.sv
-    rom.sv
-    decoder.sv
-    control_unit.sv
-    regfile.sv
-    alu.sv
-    branch_unit.sv
-    data_mem.sv
-    cpu_top.sv
+    - pc.sv
+    - rom.sv
+    - decoder.sv
+    - control_unit.sv
+    - regfile.sv
+    - alu.sv
+    - branch_unit.sv
+    - data_mem.sv
+    - cpu_top.sv
 
 ## Future Work
 
