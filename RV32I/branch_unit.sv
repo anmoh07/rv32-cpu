@@ -6,6 +6,7 @@ module branch_unit
 	input logic [31:0] rs2,
 	input logic [31:0] immediate,
 	input logic [2:0] branch_op,
+	input logic branch_enable,
 
 
 	output logic [31:0] new_pc
@@ -34,7 +35,10 @@ begin
 
 branch_target = pc + immediate;
 pc_inc4 = pc + 4;
+new_pc = pc_inc4;
 
+	if (branch_enable)
+	begin
 	case (op_t'(branch_op))
 
 		BEQ: new_pc = (rs1 == rs2) ? branch_target : pc_inc4;
@@ -45,9 +49,8 @@ pc_inc4 = pc + 4;
 		BGEU: new_pc = (rs1 >= rs2) ? branch_target : pc_inc4;
 		JAL: new_pc = branch_target;
 		JALR: new_pc = (immediate + rs1) & 32'hFFFFFFFE;
-		default: new_pc = pc_inc4; //default pc_inc
-
 	endcase
+	end
 
 end
 
